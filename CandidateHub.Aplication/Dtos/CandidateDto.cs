@@ -3,11 +3,6 @@
 public class CandidateDto
 {
     /// <summary>
-    /// Gets or sets the id of candidate.
-    /// </summary>
-    public int Id { get; set; }
-
-    /// <summary>
     /// Gets or sets the first name of candidate.
     /// </summary>
     public string FirstName { get; set; }
