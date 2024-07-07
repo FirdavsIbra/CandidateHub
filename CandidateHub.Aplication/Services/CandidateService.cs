@@ -63,12 +63,14 @@ public class CandidateService : ICandidateService
 
     public async Task<CandidateDto[]> GetAllAsync()
     {
-        if (!_cache.TryGetValue(CacheKeys.AllCandidates, out CandidateDto[] cachedCandidates))
+        var cacheKey = CacheKeys.AllCandidates;
+
+        if (!_cache.TryGetValue(cacheKey, out CandidateDto[] cachedCandidates))
         {
             var candidates = await _unitOfWork.Candidates.GetAllAsync();
             cachedCandidates = _mapper.Map<CandidateDto[]>(candidates);
 
-            _cache.Set(CacheKeys.AllCandidates, cachedCandidates, _cacheExpiration);
+            _cache.Set(cacheKey, cachedCandidates, _cacheExpiration);
         }
 
         return cachedCandidates;

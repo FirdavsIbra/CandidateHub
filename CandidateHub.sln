@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidateHub.Domain", "Cand
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidateHub.Infrastructure", "CandidateHub.Infrastructure\CandidateHub.Infrastructure.csproj", "{833F548C-75E4-409A-AB5D-765F20784F5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidateHub.Tests", "CandidateHub.Tests\CandidateHub.Tests.csproj", "{9915C403-8230-4A38-ABF7-4CE093A3E34C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{833F548C-75E4-409A-AB5D-765F20784F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{833F548C-75E4-409A-AB5D-765F20784F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{833F548C-75E4-409A-AB5D-765F20784F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9915C403-8230-4A38-ABF7-4CE093A3E34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9915C403-8230-4A38-ABF7-4CE093A3E34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9915C403-8230-4A38-ABF7-4CE093A3E34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9915C403-8230-4A38-ABF7-4CE093A3E34C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{3E74D2B1-91A3-49FD-BF7C-1A65829D756C} = {5CE487F4-9674-47A7-9836-E0BA8CC591B5}
 		{07E1CE42-593D-4FBC-BAC6-715D8A81BB99} = {5CE487F4-9674-47A7-9836-E0BA8CC591B5}
 		{833F548C-75E4-409A-AB5D-765F20784F5D} = {5CE487F4-9674-47A7-9836-E0BA8CC591B5}
+		{9915C403-8230-4A38-ABF7-4CE093A3E34C} = {415ADBAE-CD60-4502-81C6-3D0F537A3D3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5634DDDC-2608-424F-BF1B-A66733ECDF66}
