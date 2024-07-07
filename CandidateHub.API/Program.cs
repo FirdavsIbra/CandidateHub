@@ -1,4 +1,9 @@
+using CandidateHub.Application.Interfaces;
+using CandidateHub.Application.Mapping;
+using CandidateHub.Application.Services;
+using CandidateHub.Domain.Interfaces;
 using CandidateHub.Infrastructure.Data;
+using CandidateHub.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +12,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DbContext")));
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
+builder.Services.AddScoped<ICandidateService, CandidateService>();
+
+builder.Services.AddAutoMapper(typeof(ApplicationMapperProfile).Assembly);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
